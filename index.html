@@ -14,6 +14,43 @@
     <link rel="stylesheet" href="./style.css">
   </head>
 
-  <body></body>
+  <body>
+    <header>
+      <img src="./assets/logo.svg" alt="Logo Camp In">
+    </header>
+    <main>
+      <div class="form-container">
+        <div class="form-header">
+          <img src="./assets/log-in.svg" alt="Ícone de login">
+          <span class="form-title">Faça seu login</span>
+        </div>
+        <span class="form-info">Entre com suas informações de cadastro.</span>
+        <form>
+          <label for="email" class="form-label">
+            E-mail
+            <input type="email" id="email" class="form-input" required
+              placeholder="Digite seu e-mail" autocomplete="email">
+          </label>
+          <label for="password" class="form-label">
+            Senha
+            <input type="password" id="password" class="form-input" required
+              placeholder="Digite sua senha" autocomplete="off">
+            <img src="./assets/eye.svg" alt="Ícone de um olho">
+          </label>
+          <div class="form-remember-me-forgot-password">
+            <label for="remember-me" class="form-label">
+              <input type="checkbox" id="remember-me" class="form-input">
+              Lembre-me
+            </label>
+            <a href="#" class="forgot-password">Esqueci minha senha</a>
+          </div>
+          <button type="submit">Entrar</button>
+        </form>
+        <a href="#" class="form-sign-up">
+          Não tem uma conta? <span>Registre-se</span>
+        </a>
+      </div>
+    </main>
+  </body>
 
 </html>

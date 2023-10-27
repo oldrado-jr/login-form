@@ -12,7 +12,159 @@
   --primary-color: #ffc632;
 }
 
+#email {
+  --bg-icon-input: url(./assets/mail.svg);
+  --bg-icon-input-focus: url(./assets/mail-focus.svg);
+}
+
+#password {
+  --bg-icon-input: url(./assets/lock.svg);
+  --bg-icon-input-focus: url(./assets/lock-focus.svg);
+}
+
 body {
   background: var(--background);
   height: 100vh;
+}
+
+body * {
+  font-family: 'Poppins', sans-serif;
+}
+
+.form-info,
+.form-label[for="remember-me"],
+.form-input:not([type="checkbox"]) {
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  padding: 40px 20px 30px;
+}
+
+main {
+  padding: 0 20px 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.form-container,
+.form-container form,
+.form-label {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container,
+.form-label {
+  gap: 5px;
+}
+
+.form-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.form-title {
+  color: var(--text-title);
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.form-info {
+  color: var(--text-base);
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.form-container form {
+  margin: 22px 0 14px;
+  gap: 20px;
+}
+
+.form-label {
+  position: relative;
+  color: var(--text-base);
+  font-weight: 500;
+}
+
+.form-label img {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+}
+
+.form-label[for="remember-me"] {
+  flex-direction: row;
+  align-items: center;
+  font-weight: 400;
+}
+
+.form-input:not([type="checkbox"]),
+#remember-me {
+  border-radius: 4px;
+  border: 1px solid #868686;
+}
+
+.form-input:not([type="checkbox"]) {
+  background: var(--background) var(--bg-icon-input) no-repeat 12px;
+  color: #A9AFB9;
+  font-size: 14px;
+  padding: 12px 12px 12px 37px;
+}
+
+.form-input:not([type="checkbox"]):focus {
+  border-color: var(--primary-color);
+  box-shadow: 0px 0px 0px 2px #FFDE88;
+  background-image: var(--bg-icon-input-focus);
+}
+
+.form-remember-me-forgot-password {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+#remember-me {
+  width: 20px;
+  height: 20px;
+  background: var(--background);
+  appearance: none;
+}
+
+#remember-me:checked {
+  border: none;
+  background: var(--primary-color) url(./assets/check.svg) no-repeat center/cover;
+}
+
+.forgot-password {
+  color: var(--primary-color);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.form-container form button {
+  background: var(--primary-color);
+  color: #473404;
+  border: none;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.27px;
+  padding: 12px 24px;
+}
+
+.form-sign-up {
+  align-self: center;
+  color: var(--primary-color);
+  font-size: 14px;
+}
+
+.form-sign-up span {
+  font-weight: 600;
 }
